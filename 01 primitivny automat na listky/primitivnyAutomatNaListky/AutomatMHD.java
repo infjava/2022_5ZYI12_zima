@@ -25,6 +25,11 @@ public class AutomatMHD {
         this.vlozenaCiastka = 0;
         this.trzba = 0;
     }
+    
+    // metoda nastavCenuListka s parametrom novaCenaListka
+    public void nastavCenuListka(int novaCenaListka) {
+        this.cenaListka = novaCenaListka;
+    }
 
     /**
      * Vrati hodnotu ceny listka
