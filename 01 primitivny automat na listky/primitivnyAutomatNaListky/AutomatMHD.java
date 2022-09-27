@@ -83,4 +83,9 @@ public class AutomatMHD {
         this.trzba = 0;
         return povodnaTrzba;
     }
+    
+    // metoda getTrzba
+    public int getTrzba() {
+        return this.trzba;
+    }
 }
