@@ -1,0 +1,4 @@
+Osoba
+meno String
+priezvisko String
+datumNarodenia String
