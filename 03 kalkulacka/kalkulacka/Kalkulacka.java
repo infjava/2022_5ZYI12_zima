@@ -26,7 +26,18 @@ public class Kalkulacka {
                 this.vysledok = this.vysledok / this.operand;
                 break;
         }
-        this.predchadzajuciOperator = operator;
+        switch (operator) {
+            case "!":
+                int faktorial = 1;
+                for (int i = 2; i <= this.vysledok; i++) {
+                    faktorial = faktorial * i;
+                }
+                this.vysledok = faktorial;
+                break;
+            default:
+                this.predchadzajuciOperator = operator;
+                break;
+        }
     }
     
     public int getVysledok() {
