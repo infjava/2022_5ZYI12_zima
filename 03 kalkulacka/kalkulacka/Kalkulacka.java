@@ -23,7 +23,11 @@ public class Kalkulacka {
                 this.vysledok = this.vysledok * this.operand;
                 break;
             case "/":
-                this.vysledok = this.vysledok / this.operand;
+                if (this.operand == 0) {
+                    System.out.println("Delenie nulou");
+                } else {
+                    this.vysledok = this.vysledok / this.operand;
+                }
                 break;
         }
         switch (operator) {
