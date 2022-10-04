@@ -44,6 +44,14 @@ public class Kalkulacka {
         }
     }
     
+    public double vypocitajOdmocninu(double cislo) {
+        double medzivysledok = cislo / 2;
+        for (int i = 0; i < 10; i++) {
+            medzivysledok = (medzivysledok + cislo/medzivysledok) / 2;
+        }
+        return medzivysledok;
+    }
+    
     public int getVysledok() {
         return this.vysledok;
     }
