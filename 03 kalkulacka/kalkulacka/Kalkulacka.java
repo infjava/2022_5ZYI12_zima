@@ -46,8 +46,11 @@ public class Kalkulacka {
     
     public double vypocitajOdmocninu(double cislo) {
         double medzivysledok = cislo / 2;
-        for (int i = 0; i < 10; i++) {
-            medzivysledok = (medzivysledok + cislo/medzivysledok) / 2;
+        double rozdiel = 100;
+        while (rozdiel > 0.0001) {
+            double novyMedzivysledok = (medzivysledok + cislo/medzivysledok) / 2;
+            rozdiel = medzivysledok - novyMedzivysledok;
+            medzivysledok = novyMedzivysledok;
         }
         return medzivysledok;
     }
