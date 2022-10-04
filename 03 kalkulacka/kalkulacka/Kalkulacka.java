@@ -1,10 +1,12 @@
 public class Kalkulacka {
     private int vysledok;
     private int operand;
+    private boolean vlozenyPrvyOperand;
     
     public Kalkulacka() {
         this.vysledok = 0;
         this.operand = 0;
+        this.vlozenyPrvyOperand = false;
     }
     
     public void vykonaj(String operator) {
@@ -29,10 +31,11 @@ public class Kalkulacka {
     }
     
     public void vlozOperand(int operand) {
-        this.vysledok = operand;
-    }
-    
-    public void vlozDruhyOperand(int operand) {
-        this.operand = operand;
+        if (this.vlozenyPrvyOperand) {
+            this.operand = operand;
+        } else {
+            this.vysledok = operand;
+            this.vlozenyPrvyOperand = true;
+        }
     }
 }
