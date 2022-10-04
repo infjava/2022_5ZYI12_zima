@@ -38,21 +38,21 @@ public class Kalkulacka {
                 }
                 this.vysledok = faktorial;
                 break;
+            case "sqrt":
+                double cislo = this.vysledok;
+                double medzivysledok = cislo / 2;
+                double rozdiel;
+                do {
+                    double novyMedzivysledok = (medzivysledok + cislo/medzivysledok) / 2;
+                    rozdiel = medzivysledok - novyMedzivysledok;
+                    medzivysledok = novyMedzivysledok;
+                } while (rozdiel > 0.0001);
+                this.vysledok = (int) medzivysledok;
+                break;
             default:
                 this.predchadzajuciOperator = operator;
                 break;
         }
-    }
-    
-    public double vypocitajOdmocninu(double cislo) {
-        double medzivysledok = cislo / 2;
-        double rozdiel;
-        do {
-            double novyMedzivysledok = (medzivysledok + cislo/medzivysledok) / 2;
-            rozdiel = medzivysledok - novyMedzivysledok;
-            medzivysledok = novyMedzivysledok;
-        } while (rozdiel > 0.0001);
-        return medzivysledok;
     }
     
     public int getVysledok() {
