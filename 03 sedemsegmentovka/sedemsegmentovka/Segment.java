@@ -4,8 +4,8 @@ public class Segment {
     public Segment(int x, int y, int sirka, int vyska) {
         this.zobrazenie = new Obdlznik();
         
-        this.zobrazenie.posunVodorovne(x);
-        this.zobrazenie.posunZvisle(y);
+        this.zobrazenie.posunVodorovne(x - 60);
+        this.zobrazenie.posunZvisle(y - 50);
         
         this.zobrazenie.zmenStrany(sirka, vyska);
         
