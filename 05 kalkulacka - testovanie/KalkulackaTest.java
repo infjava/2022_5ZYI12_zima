@@ -52,19 +52,20 @@ public class KalkulackaTest {
     
     @Test
     public void scitanie10A3() {
-        this.kalkulacka.zadajCislo(10);
-        this.kalkulacka.zadajOperaciu('+');
-        this.kalkulacka.zadajCislo(3);
-        this.kalkulacka.zadajOperaciu('=');
-        assertEquals(13, this.kalkulacka.getVysledok(), 0.001);
+        this.otestujBinarnuOperaciu(10, '+', 3, 13);
     }
     
     @Test
     public void nasobenie10A3() {
-        this.kalkulacka.zadajCislo(10);
-        this.kalkulacka.zadajOperaciu('*');
-        this.kalkulacka.zadajCislo(3);
+        this.otestujBinarnuOperaciu(10, '*', 3, 30);
+    }
+    
+    public void otestujBinarnuOperaciu(double operand1, char operator,
+                                       double operand2, double ocakavanyVysledok) {
+        this.kalkulacka.zadajCislo(operand1);
+        this.kalkulacka.zadajOperaciu(operator);
+        this.kalkulacka.zadajCislo(operand2);
         this.kalkulacka.zadajOperaciu('=');
-        assertEquals(30, this.kalkulacka.getVysledok(), 0.001);
+        assertEquals(ocakavanyVysledok, this.kalkulacka.getVysledok(), 0.001);
     }
 }
