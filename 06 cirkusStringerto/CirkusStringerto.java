@@ -13,4 +13,22 @@ public class CirkusStringerto {
         
         return vystup.toString();
     }
+    
+    public boolean jePalindrom() {
+        for (int i = 0; i < this.retazec.length(); i++) {
+            int iOdZadu = this.retazec.length() - i - 1;
+            if (this.retazec.charAt(i) != this.retazec.charAt(iOdZadu)) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    public boolean jePalindromJednoducho() {
+        return new StringBuilder(this.retazec)
+            .reverse()
+            .toString()
+            .equals(this.retazec);
+    }
 }
