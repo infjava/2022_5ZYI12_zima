@@ -44,7 +44,7 @@ public class Kalkulacka {
                 this.medziVysledok -= this.operand;
                 break;
             case '*':
-                this.medziVysledok += this.operand;
+                this.medziVysledok *= this.operand;
                 break;
             case '/':
                 if (this.operand == 0) {

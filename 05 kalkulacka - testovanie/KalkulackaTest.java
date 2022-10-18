@@ -5,11 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class KalkulackaTest.
- *
- * @author  (your name)
- * @version (a version number or a date)
- */
+* The test class KalkulackaTest.
+*
+* @author  (your name)
+* @version (a version number or a date)
+*/
 public class KalkulackaTest {
     private Kalkulacka kalkulacka;
     
@@ -49,5 +49,22 @@ public class KalkulackaTest {
         this.kalkulacka.zadajOperaciu('=');
         assertEquals(100, this.kalkulacka.getVysledok(), 0.001);
     }
+    
+    @Test
+    public void scitanie10A3() {
+        this.kalkulacka.zadajCislo(10);
+        this.kalkulacka.zadajOperaciu('+');
+        this.kalkulacka.zadajCislo(3);
+        this.kalkulacka.zadajOperaciu('=');
+        assertEquals(13, this.kalkulacka.getVysledok(), 0.001);
+    }
+    
+    @Test
+    public void nasobenie10A3() {
+        this.kalkulacka.zadajCislo(10);
+        this.kalkulacka.zadajOperaciu('*');
+        this.kalkulacka.zadajCislo(3);
+        this.kalkulacka.zadajOperaciu('=');
+        assertEquals(30, this.kalkulacka.getVysledok(), 0.001);
+    }
 }
-
