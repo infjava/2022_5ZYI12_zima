@@ -11,6 +11,8 @@ import org.junit.Test;
  * @version (a version number or a date)
  */
 public class KalkulackaTest {
+    private Kalkulacka kalkulacka;
+    
     /**
      * Sets up the test fixture.
      *
@@ -18,6 +20,34 @@ public class KalkulackaTest {
      */
     @Before
     public void setUp() {
-        
+        this.kalkulacka = new Kalkulacka();
+    }
+    
+    @Test
+    public void vlozenieOperandu5() {
+        this.kalkulacka.zadajCislo(5);
+        assertEquals(5, this.kalkulacka.getOperand(), 0.001);
+    }
+
+    @Test
+    public void vlozenieOperandu0() {
+        this.kalkulacka.zadajCislo(0);
+        assertEquals(0, this.kalkulacka.getOperand(), 0.001);
+    }
+    
+    @Test
+    public void mocninaCisla10() {
+        this.kalkulacka.zadajCislo(10);
+        this.kalkulacka.zadajOperaciu('2');
+        assertEquals(100, this.kalkulacka.getVysledok(), 0.001);
+    }
+    
+    @Test
+    public void mocninaCisla10ARovnaSa() {
+        this.kalkulacka.zadajCislo(10);
+        this.kalkulacka.zadajOperaciu('2');
+        this.kalkulacka.zadajOperaciu('=');
+        assertEquals(100, this.kalkulacka.getVysledok(), 0.001);
     }
 }
+
