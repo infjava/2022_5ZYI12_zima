@@ -63,9 +63,9 @@ public class KalkulackaTest {
     public void otestujBinarnuOperaciu(double operand1, char operator,
                                        double operand2, double ocakavanyVysledok) {
         this.kalkulacka.zadajCislo(operand1);
-        this.kalkulacka.zadajOperaciu(operator);
+        assertTrue(this.kalkulacka.zadajOperaciu(operator));
         this.kalkulacka.zadajCislo(operand2);
-        this.kalkulacka.zadajOperaciu('=');
+        assertTrue(this.kalkulacka.zadajOperaciu('='));
         assertEquals(ocakavanyVysledok, this.kalkulacka.getVysledok(), 0.001);
     }
 }
