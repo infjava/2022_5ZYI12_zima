@@ -71,6 +71,7 @@ public class Kalkulacka {
         //Unarne operacie sa vykonavajú hneď
         if (operacia == '2') {
             this.medziVysledok = this.medziVysledok * this.medziVysledok;
+            this.operand = this.medziVysledok;
         }
         // faktorial
         else if (operacia == '!') {
