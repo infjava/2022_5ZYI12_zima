@@ -14,5 +14,10 @@ public class Hra {
     public void spusti() {
         this.manazer.spravujObjekt(this.hrac);
         this.manazer.spravujObjekt(this.bot);
+        this.manazer.spravujObjekt(this);
+    }
+    
+    public void zrus() {
+        System.exit(0);
     }
 }
