@@ -18,6 +18,11 @@ public class Ruka {
         this.ukazGesto();
     }
     
+    public void zmenGesto(int cisloGesta) {
+        this.aktualneGesto = cisloGesta;
+        this.ukazGesto();
+    }
+    
     private void ukazGesto() {
         this.gesto.zmenObrazok(this.getCestaKuGestu());
     }
