@@ -5,7 +5,7 @@ public class Bot {
     private Random nahoda;
     
     public Bot() {
-        this.ruka = new Ruka();
+        this.ruka = new Ruka(300);
         this.nahoda = new Random();
     }
     

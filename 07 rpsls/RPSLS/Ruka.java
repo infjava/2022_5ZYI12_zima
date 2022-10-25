@@ -2,10 +2,11 @@ public class Ruka {
     private Obrazok gesto;
     private int aktualneGesto;
     
-    public Ruka() {
+    public Ruka(int x) {
         this.aktualneGesto = 0;
         this.gesto = new Obrazok(this.getCestaKuGestu());
         this.gesto.zobraz();
+        this.gesto.zmenPolohu(x, 100);
     }
     
     public void zmenGestoDopredu() {
