@@ -3,9 +3,9 @@ public class Ruka {
     private int aktualneGesto;
     
     public Ruka() {
-        this.gesto = new Obrazok("pics/lizard.png");
-        this.gesto.zobraz();
         this.aktualneGesto = 0;
+        this.gesto = new Obrazok(this.getCestaKuGestu());
+        this.gesto.zobraz();
     }
     
     public void zmenGestoDopredu() {
@@ -19,7 +19,11 @@ public class Ruka {
     }
     
     private void ukazGesto() {
-        this.gesto.zmenObrazok(String.format("pics/%s.png", this.getNazovGesta()));
+        this.gesto.zmenObrazok(this.getCestaKuGestu());
+    }
+    
+    private String getCestaKuGestu() {
+        return String.format("pics/%s.png", this.getNazovGesta());
     }
     
     private String getNazovGesta() {
