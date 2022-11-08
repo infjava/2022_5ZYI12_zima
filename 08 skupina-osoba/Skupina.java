@@ -19,8 +19,16 @@ public class Skupina {
     }
     
     public void pridajNovuOsobu(String noveMeno, String novePriezvisko) {
-        // Doplnit!
-        // Poznamka: Vysvetlit anonymny objekt.
+        Osoba nova = new Osoba(noveMeno, novePriezvisko);
+        
+        for (Osoba osoba : this.osoby) {
+            if (osoba.porovnaj(nova)) {
+                System.out.println("Tato osoba uz je clenom");
+                return;
+            }
+        }
+        
+        this.osoby.add(nova);
     }
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
