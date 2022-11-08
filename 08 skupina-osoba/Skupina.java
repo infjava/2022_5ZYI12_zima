@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Skupina {
     private ArrayList<Osoba> osoby;
@@ -18,6 +19,20 @@ public class Skupina {
         }
         
         zapisovac.close();
+    }
+    
+    public void nacitajZoSuboru(String nazovSuboru) throws IOException {
+        Scanner citac = new Scanner(new File(nazovSuboru));
+        
+        this.osoby.clear();
+        while (citac.hasNextLine()) {
+            String meno = citac.next();
+            String priezvisko = citac.nextLine();
+            
+            this.osoby.add(new Osoba(meno, priezvisko));
+        }
+        
+        citac.close();
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
