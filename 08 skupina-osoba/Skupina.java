@@ -49,9 +49,8 @@ public class Skupina {
     }
     
     public void zrusSkupinu() {
-        int pocetPrvkov = this.osoby.size();
-        for (int i = pocetPrvkov - 1; i >= 0; i--) {
-            this.osoby.remove(i);
+        while (!this.osoby.isEmpty()) {
+            this.osoby.remove(0);
         }
     }
 }
