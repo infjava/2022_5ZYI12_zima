@@ -15,6 +15,16 @@ public class Osoba {
         this.body.add(pocet);
     }
     
+    public double getPocetBodov() {
+        double sucet = 0;
+        
+        for (double body : this.body) {
+            sucet += body;
+        }
+        
+        return sucet;
+    }
+    
     public String getMeno() {
         return this.meno;
     }
