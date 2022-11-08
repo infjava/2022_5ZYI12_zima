@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Skupina {
@@ -5,6 +8,16 @@ public class Skupina {
     
     public Skupina() {
         this.osoby = new ArrayList<Osoba>();
+    }
+    
+    public void zapisDoSuboru(String nazovSuboru) throws IOException {
+        PrintWriter zapisovac = new PrintWriter(new File(nazovSuboru));
+        
+        for (Osoba osoba : this.osoby) {
+            zapisovac.format("%s %s%n", osoba.getMeno(), osoba.getPriezvisko());
+        }
+        
+        zapisovac.close();
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
