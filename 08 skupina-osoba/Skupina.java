@@ -8,7 +8,7 @@ public class Skupina {
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
-        // Doplnit!
+        this.osoby.add(novaOsoba);
     }
     
     public void pridajNovuOsobu(String noveMeno, String novePriezvisko) {
