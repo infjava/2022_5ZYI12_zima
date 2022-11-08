@@ -19,8 +19,7 @@ public class Skupina {
     }
     
     public void pridajNovuOsobu(String noveMeno, String novePriezvisko) {
-        Osoba nova = new Osoba(noveMeno, novePriezvisko);
-        this.pridajObjektOsoba(nova);
+        this.pridajObjektOsoba(new Osoba(noveMeno, novePriezvisko));
     }
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
