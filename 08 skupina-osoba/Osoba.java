@@ -25,6 +25,18 @@ public class Osoba {
         return sucet;
     }
     
+    public double getNajlepsiaZnamka() {
+        double najlepsia = Double.NEGATIVE_INFINITY;
+        
+        for (double body : this.body) {
+            if (body > najlepsia) {
+                najlepsia = body;
+            }
+        }
+        
+        return najlepsia;
+    }
+
     public String getMeno() {
         return this.meno;
     }
