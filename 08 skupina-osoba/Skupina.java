@@ -8,11 +8,9 @@ public class Skupina {
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
-        for (Osoba osoba : this.osoby) {
-            if (osoba.porovnaj(novaOsoba)) {
-                System.out.println("Tato osoba uz je clenom");
-                return;
-            }
+        if (this.jeClenomSkupiny(novaOsoba)) {
+            System.out.println("Tato osoba uz je clenom");
+            return;
         }
         
         this.osoby.add(novaOsoba);
@@ -23,8 +21,12 @@ public class Skupina {
     }
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
-        // Doplnit!
-        // Poznamka: V metóde nepouzivajte vetvenie (prikaz IF)!
+        for (Osoba osoba : this.osoby) {
+            if (osoba.porovnaj(hladanaOsoba)) {
+                return true;
+            }
+        }
+        
         return false;
     }
         
