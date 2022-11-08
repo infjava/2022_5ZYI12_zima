@@ -49,7 +49,9 @@ public class Skupina {
     }
     
     public void zrusSkupinu() {
-        // Doplnit!
-        // Ktory cyklus pouzijete? Foreach? While? Treba vobec cyklus?
+        int pocetPrvkov = this.osoby.size();
+        for (int i = 0; i < pocetPrvkov; i++) {
+            this.osoby.remove(0);
+        }
     }
 }
