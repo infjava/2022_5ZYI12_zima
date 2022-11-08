@@ -50,8 +50,8 @@ public class Skupina {
     
     public void zrusSkupinu() {
         int pocetPrvkov = this.osoby.size();
-        for (int i = 0; i < pocetPrvkov; i++) {
-            this.osoby.remove(0);
+        for (int i = pocetPrvkov - 1; i >= 0; i--) {
+            this.osoby.remove(i);
         }
     }
 }
