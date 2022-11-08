@@ -8,6 +8,18 @@ public class Skupina {
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
+        // for (Osoba osoba : this.osoby) {
+            // if (osoba == novaOsoba) {
+                // System.out.println("Tato osoba uz je clenom");
+                // return;
+            // }
+        // }
+        
+        if (this.osoby.contains(novaOsoba)) {
+            System.out.println("Tato osoba uz je clenom");
+            return;
+        }
+        
         this.osoby.add(novaOsoba);
     }
     
