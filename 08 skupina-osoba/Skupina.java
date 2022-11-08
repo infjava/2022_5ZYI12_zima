@@ -35,8 +35,9 @@ public class Skupina {
     }
         
     public void vypisClenovSkupiny() {
-        // Doplnit!
-        // Ukazat vsetky 3 cykly - foreach, while s lokalnou premennou aj for (pristup k prvkom cez get(i)
+        for (Osoba osoba : this.osoby) {
+            osoba.vypis();
+        }
     }
     
     public void odstranPodlaPoradia(int poradie) {
