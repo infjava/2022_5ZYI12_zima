@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Osoba {
     private String meno;
@@ -26,15 +27,7 @@ public class Osoba {
     }
     
     public double getNajlepsiaZnamka() {
-        double najlepsia = Double.NEGATIVE_INFINITY;
-        
-        for (double body : this.body) {
-            if (body > najlepsia) {
-                najlepsia = body;
-            }
-        }
-        
-        return najlepsia;
+        return Collections.max(this.body);
     }
 
     public String getMeno() {
