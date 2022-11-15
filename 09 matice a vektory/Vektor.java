@@ -9,20 +9,15 @@ public class Vektor {
         this.vektor[rozmer - 1] = hodnota;
     }
     
-    private int[] getPole() {
-        return this.vektor;
-    }
-    
     public int skalarnySucin(Vektor druhy) {
-        int[] druhePole = druhy.getPole();
-        if (this.vektor.length != druhePole.length) {
+        if (this.vektor.length != druhy.vektor.length) {
             System.out.println("Neda sa vypocitat");
             return 0;
         }
         
         int medzivysledok = 0;
         for (int i = 0; i < this.vektor.length; i++) {
-            medzivysledok += this.vektor[i] * druhePole[i];
+            medzivysledok += this.vektor[i] * druhy.vektor[i];
         }
         
         return medzivysledok;
