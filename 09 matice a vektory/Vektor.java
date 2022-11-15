@@ -9,23 +9,20 @@ public class Vektor {
         this.vektor[rozmer - 1] = hodnota;
     }
     
-    public int getPocetRozmerov() {
-        return this.vektor.length;
-    }
-    
-    public int getHodnotu(int rozmer) {
-        return this.vektor[rozmer - 1];
+    private int[] getPole() {
+        return this.vektor;
     }
     
     public int skalarnySucin(Vektor druhy) {
-        if (this.vektor.length != druhy.getPocetRozmerov()) {
+        int[] druhePole = druhy.getPole();
+        if (this.vektor.length != druhePole.length) {
             System.out.println("Neda sa vypocitat");
             return 0;
         }
         
         int medzivysledok = 0;
         for (int i = 0; i < this.vektor.length; i++) {
-            medzivysledok += this.vektor[i] * druhy.getHodnotu(i + 1);
+            medzivysledok += this.vektor[i] * druhePole[i];
         }
         
         return medzivysledok;
