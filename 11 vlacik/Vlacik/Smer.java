@@ -1,8 +1,8 @@
 public enum Smer {
-    VLAVO(180, -1, 0),
-    VPRAVO(0, 1, 0),
-    HORE(270, 0, -1),
-    DOLE(90, 0, 1);
+    VLAVO(0, -1, 0),
+    VPRAVO(180, 1, 0),
+    HORE(90, 0, -1),
+    DOLE(270, 0, 1);
     
     private final int uhol;
     private final int vektorX;
