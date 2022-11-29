@@ -1,3 +1,5 @@
+import fri.shapesge.Obrazok;
+
 public class PolickovyObrazok {
     private final Obrazok obrazok;
     private int x;
