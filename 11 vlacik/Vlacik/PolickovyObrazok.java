@@ -20,8 +20,8 @@ public class PolickovyObrazok {
     public void zmenPoziciu(int x, int y) {
         int zmenaX = x - this.x;
         int zmenaY = y - this.y;
-        this.obrazok.posunZvisle(zmenaX * 35);
-        this.obrazok.posunVodorovne(zmenaY * 35);
+        this.obrazok.posunVodorovne(zmenaX * 35);
+        this.obrazok.posunZvisle(zmenaY * 35);
         this.x = x;
         this.y = y;
     }
