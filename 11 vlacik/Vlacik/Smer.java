@@ -4,7 +4,7 @@ public enum Smer {
     HORE(270),
     DOLE(90);
     
-    private int uhol;
+    private final int uhol;
     
     Smer(int uhol) {
         this.uhol = uhol;

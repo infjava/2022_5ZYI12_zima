@@ -4,7 +4,7 @@ public enum TypBlokuVlaku {
     VAGON_MODRY("pics/vagon01.png"),
     VAGON_CERVENY("pics/vagon02.png");
     
-    private String cestaKObrazku;
+    private final String cestaKObrazku;
     
     TypBlokuVlaku(String cestaKObrazku) {
         this.cestaKObrazku = cestaKObrazku;
