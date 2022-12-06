@@ -53,12 +53,22 @@ public class Menu {
     }
     
     private void registrujTim() {
+        if (this.turnaj != null) {
+            System.out.println("Turnaj uz bezi, nemozes sa registrovat");
+            return;
+        }
+        
         System.out.println("Zadaj nazov timu:");
         String nazovTimu = vstup.nextLine();
         this.registrovaneTimy.add(nazovTimu);
     }
     
     private void vytvorTurnaj() {
+        if (this.turnaj != null) {
+            System.out.println("Turnaj uz bezi, nemozes vytvorit dalsi");
+            return;
+        }
+        
         String[] timy = new String[this.registrovaneTimy.size()];
         
         for (int i = 0; i < timy.length; i++) {
